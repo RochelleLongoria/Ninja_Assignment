@@ -26,7 +26,29 @@
 
         
     }
+
     const ninja1 = new Ninja("Hyabusa");
     ninja1.sayName();
     ninja1.saySake();
     ninja1.showStats();
+
+    class Sensei extends Ninja {
+        constructor(name, health, speed, strength){
+            super("Master Splinter", 210, 10, 10, wisdom)
+            this.wisdom = 10;
+        }
+          //  methods
+        // This should log that Ninja's name to the console
+        speakWisdom() {
+            const speak = super.saySake();
+            console.log(`${speak}`);
+        }
+
+    }
+
+// example output
+const superSensei = new Sensei("Master Splinter");
+superSensei.speakWisdom();
+// -> "What one programmer can do in one month, two programmers can do in two months."
+superSensei.showStats();
+// -> "Name: Master Splinter, Health: 210, Speed: 10, Strength: 10"
